@@ -8,9 +8,9 @@ I am a Mathematics and Computer Science student at Amirkabir University of Techn
 
 ## Resume
 
-You can view and download my resume in PDF format from the [resume.pdf](English\ResumeEn.pdf) file.
+You can view and download my resume in PDF format from the [resume.pdf](English\ResumeEn.pdf\\) file.
 
-### ![My Resume](English\ResumeEn.png)
+### ![My Resume](English\ResumeEn.png\\)
 
 ## Skills
 
