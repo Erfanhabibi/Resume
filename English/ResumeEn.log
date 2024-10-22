@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.11)  22 OCT 2024 18:49
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.11)  22 OCT 2024 19:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -549,12 +549,13 @@ Package fontspec Info: Font family 'TeXGyreTermesX(0)' created for font
 
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 74.
- (./ResumeEn.aux)
+
+No file ResumeEn.aux.
 \openout1 = `ResumeEn.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 74.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 74.
- (c:/texlive/2023/texmf-dist/tex/latex/newtx/omlntxmi.fd
+(c:/texlive/2023/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
 LaTeX Font Info:    ... okay on input line 74.
@@ -634,9 +635,11 @@ LaTeX Font Info:    ... okay on input line 74.
 LaTeX Info: Command `\dddot' is already robust on input line 74.
 LaTeX Info: Command `\ddddot' is already robust on input line 74.
 Package hyperref Info: Link coloring ON on input line 74.
-(./ResumeEn.out) (./ResumeEn.out)
 \@outlinefile=\write3
 \openout3 = `ResumeEn.out'.
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
 (Font)              scaled to size 25.0pt on input line 78.
@@ -644,7 +647,7 @@ LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 101.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 101.
- (c:/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd) (c:/texlive/2023/texmf-dist/tex/latex/newtx/untxmia.fd) (c:/texlive/2023/texmf-dist/tex/latex/newtx/untxsym.fd) (c:/texlive/2023/texmf-dist/tex/latex/newtx/untxsyc.fd)
+(c:/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd) (c:/texlive/2023/texmf-dist/tex/latex/newtx/untxmia.fd) (c:/texlive/2023/texmf-dist/tex/latex/newtx/untxsym.fd) (c:/texlive/2023/texmf-dist/tex/latex/newtx/untxsyc.fd)
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
 (Font)              scaled to size 9.0pt on input line 123.
  [1
@@ -656,14 +659,27 @@ enddocument/afterlastpage: lastpage setting LastPage.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `ResumeEn.out' has not changed.
-(rerunfilecheck)             Checksum: 3587F3CAE05BC199A83995CB2D5D7CF2;341.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `ResumeEn.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ResumeEn.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  3587F3CAE05BC199A83995CB2D5D7CF2;341.
+
+Package lastpage Warning: Rerun to get the references right on input line 200.
+
  ) 
 Here is how much of TeX's memory you used:
- 18588 strings out of 474879
- 325203 string characters out of 5763781
+ 18579 strings out of 474879
+ 325073 string characters out of 5763781
  1937630 words of memory out of 5000000
- 40371 multiletter control sequences out of 15000+600000
+ 40368 multiletter control sequences out of 15000+600000
  574309 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  75i,8n,100p,291b,340s stack positions out of 10000i,1000n,20000p,200000b,200000s
