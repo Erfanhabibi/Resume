@@ -1,0 +1,203 @@
+\documentclass[10pt, a4paper]{article}
+
+% Packages:
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec} % For custom fonts
+
+
+\usepackage[
+    ignoreheadfoot, 
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\usepackage{enumitem} % for customizing lists
+\usepackage{amsmath} % for math
+\usepackage{hyperref} % for links, metadata and bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{needspace} % for avoiding page break right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+\usepackage{xepersian} % For Persian language support
+
+\settextfont{XB Niloofar}
+\setdigitfont[Scale = 1.0,
+BoldFont = * Bd,
+ItalicFont = * It,
+BoldItalicFont = * BdIt,
+Extension = .ttf
+]{Yas}
+
+% Set RTL layout
+\setRTL
+
+% Some settings:
+\raggedleft
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column separation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    -1pt
+}{
+    0.3 cm
+}{
+    0.2 cm
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+
+% Define missing environments
+\newenvironment{header}{
+    \centering
+}{\par}
+
+\newenvironment{twocolentry}[1]{
+    \begin{tabularx}{\textwidth}{Xl} % Change to 'Xl' for RTL
+}{\end{tabularx}}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0pt}{0pt}
+}{\end{adjustwidth}}
+
+\newenvironment{highlights}{
+    \begin{itemize}[rightmargin=*] % Align itemize to right
+}{\end{itemize}}
+
+% Begin Document
+\begin{document}
+
+    % Header
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont عرفان حبیبی احسنی
+
+        \vspace{5 pt}
+
+        \normalsize
+        تهران، ایران%
+        \kern 5.0 pt%
+        \textbar%
+        \kern 5.0 pt%
+        \href{mailto:erfan.habibi.ehsani@gmail.com}{erfan.habibi.ehsani@gmail.com}%
+        \kern 5.0 pt%
+        \textbar%
+        \kern 5.0 pt%
+        \href{https://www.linkedin.com/in/erfanhabibi/}{linkedin.com/in/erfanhabibi}%
+        \kern 5.0 pt%
+        \textbar%
+        \kern 5.0 pt%
+        \href{https://github.com/Erfanhabibi}{github.com/Erfanhabibi}%
+    \end{header}
+
+\vspace{10 pt}
+
+% Education Section
+\section{تحصیلات}
+
+\begin{tabularx}{\textwidth}{Xl} % Change to 'Xl' for RTL
+    \textbf{دانشجو کارشناسی در ریاضیات و کاربردها} & دانشگاه امیرکبیر، تهران، ایران \\
+\end{tabularx}
+
+\vspace{0.1 cm}
+
+\textbf{تاریخ فارغ‌التحصیلی :} 1404\\
+
+\textbf{دوره‌های مرتبط:} ساختارهای داده، الگوریتم‌ها، یادگیری ماشین، برنامه‌نویسی پیشرفته
+
+% Experience Section
+\section{تجربیات}
+
+\begin{tabularx}{\textwidth}{Xl} % Change to 'Xl' for RTL
+    \textbf{پروژه‌های شخصی و آکادمیک} & 2021 -- حال \\ 
+\end{tabularx}
+
+\vspace{0.1 cm}
+
+\textbf{نکات کلیدی:}
+\begin{itemize}
+    \item توسعه یک برنامه پایتون با استفاده از OpenCV برای پردازش تصویر در زمان واقعی، با امکاناتی از جمله تشخیص شی و فیلتر کردن تصویر.
+    \item پیاده‌سازی یک پروژه داده‌کاوی با استفاده از پایتون، استخراج اطلاعات ارزشمند از مجموعه‌های داده بزرگ با استفاده از کتابخانه‌هایی مانند pandas و NumPy برای تصمیم‌گیری.
+    \item ایجاد برنامه‌های وب تعاملی با استفاده از جاوا و جاوااسکریپت، افزایش تجربه کاربری از طریق محتوای پویا و طراحی واکنش‌گرا.
+\end{itemize}
+
+% Projects Section
+\section{پروژه‌ها}
+
+\begin{tabularx}{\textwidth}{Xl} % Change to 'Xl' for RTL
+    \textbf{سیستم ارتباط سرور-کلاینت} & \href{https://github.com/Erfanhabibi/python-socket.git}{github.com/Erfanhabibi/python-socket} \\ 
+\end{tabularx}
+
+\vspace{0.1 cm}
+
+\textbf{نکات کلیدی:}
+\begin{itemize}
+    \item پیاده‌سازی یک سیستم ارتباط سرور-کلاینت با استفاده از سوکت‌های پایتون برای انتقال داده‌های تصویری و صوتی.
+    \item \textbf{سرور:} استفاده از Tkinter برای رابط کاربری و OpenCV برای ضبط تصاویر از وب‌کم، همراه با PyAudio برای ضبط صوت.
+    \item \textbf{پیش‌نیازها:} Python OpenCV, PyAudio, Pillow,
+    \item \textbf{استفاده:} اجرای اسکریپت \texttt{server.py}، کلیک بر روی "شروع سرور" برای راه‌اندازی و ضبط تصاویر و صدا. فایل‌های دریافتی در دایرکتوری‌های \texttt{captured\_images\_server} و \texttt{captured\_audio\_server} ذخیره می‌شوند.
+    \item \textbf{کلاینت:} مسئول ارسال داده‌های تصویری و صوتی به سرور. به طور جداگانه بر اساس آدرس IP و شماره پورت سرور پیاده‌سازی می‌شود.
+    \item \textbf{نکات:} اطمینان از پیکربندی‌های صحیح شبکه برای ارتباط؛ تنظیم آدرس IP و شماره پورت‌ها در کد بر اساس نیاز.
+\end{itemize}
+
+% Skills Section
+\section{مهارت‌ها}
+
+\begin{onecolentry}
+    \textbf{زبان‌های برنامه‌نویسی:} Python، C++، Java، C
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{توسعه وب:} HTML، CSS، JavaScript، React، Django
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{یادگیری ماشین:} کتابخانه‌های پایتون مانند NumPy، pandas، scikit-learn، TensorFlow، Keras,
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{پردازش تصویر:} کتابخانه‌های پایتون مانند OpenCV، Pillow، scikit-image,
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{داده‌کاوی:} آشنایی با تکنیک‌های تحلیل و داده‌کاوی (مانند \texttt{pandas}، \texttt{NumPy}، \texttt{BeautifulSoup})
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{شبکه:} درک پروتکل‌های شبکه، TCP/IP و تجربه با برنامه‌نویسی سوکت
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{لینوکس:} آشنایی ابتدایی با مفاهیم و دستورات لینوکس
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{سایر:} Git , الگوریتم‌ها، ساختارهای داده، حل مسئله
+\end{onecolentry}
+
+\end{document}
