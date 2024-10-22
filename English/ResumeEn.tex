@@ -1,0 +1,200 @@
+\documentclass[10pt, a4paper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, 
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Erfan Habibi Ehsani's CV},
+    pdfauthor={Erfan Habibi Ehsani},
+    colorlinks=true,
+    urlcolor=black
+]{hyperref} % for links, metadata and bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{needspace} % for avoiding page break right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Font setup - New Times Roman
+\usepackage{newtxtext,newtxmath} % Times New Roman font
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column separation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    -1pt
+}{
+    0.3 cm
+}{
+    0.2 cm
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+
+% Define missing environments
+\newenvironment{header}{
+    \centering
+}{\par}
+
+\newenvironment{twocolentry}[1]{
+    \begin{tabularx}{\textwidth}{Xr}
+}{\end{tabularx}}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0pt}{0pt}
+}{\end{adjustwidth}}
+
+\newenvironment{highlights}{
+    \begin{itemize}[leftmargin=*]
+}{\end{itemize}}
+
+% Begin Document
+\begin{document}
+
+    % Header
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Erfan Habibi Ehsani
+
+        \vspace{5 pt}
+
+        \normalsize
+        Tehran, Iran%
+        \kern 5.0 pt%
+        \textbar%
+        \kern 5.0 pt%
+        \href{mailto:erfan.habibi.ehsani@gmail.com}{erfan.habibi.ehsani@gmail.com}% 
+        \kern 5.0 pt%
+        \textbar%
+        \kern 5.0 pt%
+        \href{https://www.linkedin.com/in/erfanhabibi/}{linkedin.com/in/erfanhabibi}% 
+        \kern 5.0 pt%
+        \textbar%
+        \kern 5.0 pt%
+        \href{https://github.com/Erfanhabibi}{github.com/Erfanhabibi}%
+    \end{header}
+
+\vspace{10 pt}
+
+% Education Section
+\section{Education}
+
+\begin{tabularx}{\textwidth}{Xr}
+    \textbf{B.Sc. in Mathematics and Computer Science}, Amirkabir University of Technology, Tehran, Iran & 2020 -- Present \\
+\end{tabularx}
+
+\vspace{0.1 cm}
+
+\textbf{Expected Graduation:} 2025 \\
+\textbf{Relevant Coursework:} Data Structures, Algorithms, Machine Learning, Advanced Programming
+
+% Experience Section
+\section{Experience}
+
+\begin{tabularx}{\textwidth}{Xr}
+    \textbf{Personal and Academic Coding Projects} & 2021 -- Present \\
+\end{tabularx}
+
+\vspace{0.1 cm}
+
+\textbf{Highlights:}
+\begin{itemize}
+    \item Developed a Python application utilizing OpenCV for real-time image processing, enabling features such as object detection and image filtering.
+    \item Implemented a data mining project using Python, extracting valuable insights from large datasets with libraries like pandas and NumPy to inform decision-making.
+    \item Created interactive web applications using Java and JavaScript, enhancing user experience through dynamic content and responsive design.
+\end{itemize}
+
+
+% Projects Section
+\section{Projects}
+
+\begin{tabularx}{\textwidth}{Xr}
+    \textbf{Server-Client Communication System} & \href{https://github.com/Erfanhabibi/python-socket.git}{github.com/Erfanhabibi/python-socket} \\
+\end{tabularx}
+
+\vspace{0.1 cm}
+
+\textbf{Highlights:}
+\begin{itemize}
+    \item Implemented a server-client communication system using Python's sockets for transferring images and audio data.
+    \item \textbf{Server:} Utilizes Tkinter for the GUI and OpenCV for capturing images from the webcam, along with PyAudio for recording audio.
+    \item \textbf{Prerequisites:} Python 3.x, OpenCV , PyAudio, Pillow .
+    \item \textbf{Usage:} Run the \texttt{server.py} script, click "Start Server" to initialize, and capture images and record audio. Received files are saved in the \texttt{captured\_images\_server} and \texttt{captured\_audio\_server} folders.
+    \item \textbf{Client:} Responsible for sending images and audio data to the server. Implemented separately based on the server's IP address and port numbers.
+    \item \textbf{Notes:} Ensure proper network configurations for communication; adjust the IP address and port numbers in the code as needed.
+\end{itemize}
+
+
+
+% Skills Section
+\section{Skills}
+
+\begin{onecolentry}
+    \textbf{Programming Languages:} Python, C++, Java, C
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{Web Development:} HTML, CSS, JavaScript, React, Django
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{Machine Learning:} Python libraries such as NumPy, pandas, scikit-learn, TensorFlow, Keras
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{Image Processing:} Python libraries such as OpenCV, Pillow, scikit-image
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{Data Mining:} Knowledge of data analysis and mining techniques (e.g., \texttt{pandas}, \texttt{NumPy}, \texttt{BeautifulSoup})
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{Networking:} Understanding of networking protocols, TCP/IP, and experience with socket programming
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{Linux:} Basic knowledge of Linux concepts and commands
+\end{onecolentry}
+
+\vspace{0.1 cm}
+
+\begin{onecolentry}
+    \textbf{Other:} Git, Algorithms, Data Structures, Problem Solving
+\end{onecolentry}
+
+
+\end{document}
