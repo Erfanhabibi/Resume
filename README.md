@@ -25,4 +25,4 @@ You can view and download my resume in PDF format from the [resume.pdf](./Englis
 
 ## Contact
 
-Feel free to reach out via email at [erfan.habibi.ehsani@gmail.com](mailto:erfan.habibi.ehsani@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/erfanhabibi/) or [GitHub](https://github.com/Erfanhabibi).
+Feel free to reach out via email at [erfan.habibi.ehsani@gmail.com](mailto:erfan.habibi.ehsani@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/erfanhabibi/).
