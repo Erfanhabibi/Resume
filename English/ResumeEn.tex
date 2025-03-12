@@ -73,27 +73,27 @@
 % Begin Document
 \begin{document}
 
-    % Header
-    \begin{header}
-        \fontsize{25 pt}{25 pt}\selectfont Erfan Habibi Ehsani
+% Header
+\begin{header}
+    \fontsize{25 pt}{25 pt}\selectfont Erfan Habibi Ehsani
 
-        \vspace{5 pt}
+    \vspace{5 pt}
 
-        \normalsize
-        Tehran, Iran%
-        \kern 5.0 pt%
-        \textbar%
-        \kern 5.0 pt%
-        \href{mailto:erfan.habibi.ehsani@gmail.com}{erfan.habibi.ehsani@gmail.com}% 
-        \kern 5.0 pt%
-        \textbar%
-        \kern 5.0 pt%
-        \href{https://www.linkedin.com/in/erfanhabibi/}{linkedin.com/in/erfanhabibi}% 
-        \kern 5.0 pt%
-        \textbar%
-        \kern 5.0 pt%
-        \href{https://github.com/Erfanhabibi}{github.com/Erfanhabibi}%
-    \end{header}
+    \normalsize
+    Tehran, Iran%
+    \kern 5.0 pt%
+    \textbar%
+    \kern 5.0 pt%
+    \href{mailto:erfan.habibi.ehsani@gmail.com}{erfan.habibi.ehsani@gmail.com}% 
+    \kern 5.0 pt%
+    \textbar%
+    \kern 5.0 pt%
+    \href{https://www.linkedin.com/in/erfanhabibi/}{linkedin.com/in/erfanhabibi}% 
+    \kern 5.0 pt%
+    \textbar%
+    \kern 5.0 pt%
+    \href{https://github.com/Erfanhabibi}{github.com/Erfanhabibi}%
+\end{header}
 
 \vspace{10 pt}
 
@@ -109,22 +109,25 @@
 \textbf{Expected Graduation:} 2025 \\
 \textbf{Relevant Coursework:} Data Structures, Algorithms, Machine Learning, Advanced Programming
 
-% Experience Section
-\section{Experience}
+% % Experience Section
+% \section{Experience}
 
-\begin{tabularx}{\textwidth}{Xr}
-    \textbf{Personal and Academic Coding Projects} & 2021 -- Present \\
-\end{tabularx}
+% \begin{tabularx}{\textwidth}{Xr}
+%     \textbf{Personal and Academic Coding Projects} & 2021 -- Present \\
+% \end{tabularx}
 
-\vspace{0.1 cm}
+% \vspace{0.1 cm}
 
-\textbf{Highlights:}
-\begin{itemize}
-    \item Developed a Python application utilizing OpenCV for real-time image processing, enabling features such as object detection and image filtering.
-    \item Implemented a data mining project using Python, extracting valuable insights from large datasets with libraries like pandas and NumPy to inform decision-making.
-    \item Created interactive web applications using Java and JavaScript, enhancing user experience through dynamic content and responsive design.
-\end{itemize}
-
+% \textbf{Highlights:}
+% \begin{itemize}
+%     \item Developed a Python application utilizing OpenCV for real-time image processing,
+%           enabling features such as object detection and image filtering.
+%     \item Implemented a data mining project using Python, extracting valuable insights
+%           from large datasets with libraries like pandas and NumPy to inform
+%           decision-making.
+%     \item Created interactive web applications using Java and JavaScript, enhancing user
+%           experience through dynamic content and responsive design.
+% \end{itemize}
 
 % Projects Section
 \section{Projects}
@@ -137,7 +140,8 @@
 
 \textbf{Highlights:}
 \begin{itemize}
-    \item Implemented a server-client communication system using Python's sockets for transferring images and audio data.
+    \item Implemented a server-client communication system using Python's sockets for
+          transferring images and audio data.
     \item \textbf{Server:} Utilizes Tkinter for the GUI and OpenCV for capturing images from the webcam, along with PyAudio for recording audio.
     \item \textbf{Prerequisites:} Python 3.x, OpenCV , PyAudio, Pillow .
     \item \textbf{Usage:} Run the \texttt{server.py} script, click "Start Server" to initialize, and capture images and record audio. Received files are saved in the \texttt{captured\_images\_server} and \texttt{captured\_audio\_server} folders.
@@ -145,20 +149,31 @@
     \item \textbf{Notes:} Ensure proper network configurations for communication; adjust the IP address and port numbers in the code as needed.
 \end{itemize}
 
+\begin{tabularx}{\textwidth}{Xr}
+    \textbf{Message Broker System} & \href{https://github.com/Erfanhabibi/MessageBroker}{github.com/Erfanhabibi/MessageBroker} \\
+\end{tabularx}
 
+\vspace{0.1 cm}
+
+\textbf{Highlights:}
+\begin{itemize}
+    \item Developed a Message Broker system in C\# to manage data transfer between producers and consumers while ensuring message order and persistence.
+    \item \textbf{Endpoints:} Designed endpoints for producers to send messages and consumers to receive them.
+    \item \textbf{Multithreading:} Implemented thread management to allow producers and consumers to define their required number of threads dynamically.
+    \item \textbf{Message Persistence:} Ensured data durability by storing messages in files to prevent data loss in case of server failures or restarts.
+    \item \textbf{Plugin System:} Designed a decoupled architecture using interfaces and attributes, enabling third-party developers to extend producer and consumer functionalities dynamically.
+    \item \textbf{Retry Mechanism:} Implemented an automatic retry mechanism for failed message deliveries, ensuring messages are resent when the server is down and retried at configured intervals.
+    \item \textbf{Logging System:} Developed a logging mechanism to track key operations such as message sending, receiving, storing, and recovery, with configurable log levels (Info, Warning, Error).
+
+\end{itemize}
 
 % Skills Section
 \section{Skills}
 
 \begin{onecolentry}
-    \textbf{Programming Languages:} Python, C++, Java, C
+    \textbf{Programming Languages:} Python, C++, Java, C, C\#
 \end{onecolentry}
 
-\vspace{0.1 cm}
-
-\begin{onecolentry}
-    \textbf{Web Development:} HTML, CSS, JavaScript, React, Django
-\end{onecolentry}
 
 \vspace{0.1 cm}
 
@@ -195,6 +210,5 @@
 \begin{onecolentry}
     \textbf{Other:} Git, Algorithms, Data Structures, Problem Solving
 \end{onecolentry}
-
 
 \end{document}
