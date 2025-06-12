@@ -1,13 +1,13 @@
-\documentclass[10pt, a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 
 % Packages:
 \usepackage[
     ignoreheadfoot, 
-    top=2 cm,
-    bottom=2 cm,
-    left=2 cm,
-    right=2 cm,
-    footskip=1.0 cm
+    top=1.8cm,
+    bottom=1.8cm,
+    left=1.8cm,
+    right=1.8cm,
+    footskip=1.0cm
 ]{geometry} % for adjusting page geometry
 \usepackage{titlesec} % for customizing section titles
 \usepackage{tabularx} % for making tables with fixed width columns
@@ -46,172 +46,102 @@
 \titlespacing{\section}{
     -1pt
 }{
-    0.3 cm
+    0.2cm  % Reduced space before section title
 }{
-    0.2 cm
+    0.2cm
 }
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\setlist[itemize]{nosep, leftmargin=*, topsep=0.1cm, partopsep=0pt, parsep=0pt} % Compact lists
 
-% Define missing environments
-\newenvironment{header}{
-    \centering
-}{\par}
+% Custom environments
+\newenvironment{header}{\centering}{\par}
+\newenvironment{onecolentry}{\begin{adjustwidth}{0pt}{0pt}}{\end{adjustwidth}}
 
-\newenvironment{twocolentry}[1]{
-    \begin{tabularx}{\textwidth}{Xr}
-}{\end{tabularx}}
-
-\newenvironment{onecolentry}{
-    \begin{adjustwidth}{0pt}{0pt}
-}{\end{adjustwidth}}
-
-\newenvironment{highlights}{
-    \begin{itemize}[leftmargin=*]
-}{\end{itemize}}
-
-% Begin Document
+% --- BEGIN DOCUMENT ---
 \begin{document}
 
 % Header
 \begin{header}
-    \fontsize{25 pt}{25 pt}\selectfont Erfan Habibi Ehsani
+    \fontsize{25pt}{25pt}\selectfont Erfan Habibi Ehsani 
 
-    \vspace{5 pt}
+    \vspace{4pt}
 
     \normalsize
-    % Tehran, Iran%
-    % \kern 5.0 pt%
-    % \textbar%
-    \kern 5.0 pt%
-    \href{mailto:erfan.habibi.ehsani@gmail.com}{erfan.habibi.ehsani@gmail.com}% 
-    \kern 5.0 pt%
-    \textbar%
-    \kern 5.0 pt%
-    \href{https://www.linkedin.com/in/erfanhabibi/}{linkedin.com/in/erfanhabibi}% 
-    \kern 5.0 pt%
-    \textbar%
-    \kern 5.0 pt%
-    \href{https://github.com/Erfanhabibi}{github.com/Erfanhabibi}%
-    \textbar%
-    \kern 5.0 pt%
-    \href{tel:+989144975069}{+98 914 497 5069}
+    % Tehran, Iran
+    % \kern 5.0pt\textbar\kern 5.0pt
+    \href{mailto:erfan.habibi.ehsani@gmail.com}{erfan.habibi.ehsani@gmail.com} 
+    \kern 5.0pt\textbar\kern 5.0pt
+    \href{https://www.linkedin.com/in/erfanhabibi/}{linkedin.com/in/erfanhabibi} 
+    \kern 5.0pt\textbar\kern 5.0pt
+    \href{https://github.com/Erfanhabibi}{github.com/Erfanhabibi} 
+    \kern 5.0pt\textbar\kern 5.0pt
+    +98 914 497 5069 
 \end{header}
 
-\vspace{10 pt}
+% --- PROFESSIONAL SUMMARY ---
+\begin{onecolentry}
+\vspace{4pt}
+\section{Professional Summary}
+A driven and detail-oriented Computer Science student with a strong foundation in software engineering, machine learning, and system design. Proven ability to develop complex applications in Python and C\#/.NET, as demonstrated by advanced projects in network communication and message brokering. Seeking a challenging role to apply my skills in software development and problem-solving.
+\end{onecolentry}
 
-% Education Section
+
+% --- EDUCATION SECTION ---
 \section{Education}
-
 \begin{tabularx}{\textwidth}{Xr}
-    \textbf{B.Sc. in Mathematics and Computer Science}, Amirkabir University of Technology, Tehran, Iran & 2020 -- Present \\
+    \textbf{B.Sc. in Mathematics and Computer Science}, Amirkabir University of Technology, Tehran, Iran  & \textit{2020 -- 2025 (Expected)} \\
 \end{tabularx}
+\textbf{Relevant Coursework:} Data Structures, Algorithms, Machine Learning, Advanced Programming 
 
-\vspace{0.1 cm}
 
-\textbf{Expected Graduation:} 2025 \\
-\textbf{Relevant Coursework:} Data Structures, Algorithms, Machine Learning, Advanced Programming
+% --- EXPERIENCE SECTION ---
+\section{Experience}
+\begin{tabularx}{\textwidth}{Xr}
+    \textbf{C\# and .NET Bootcamp Trainee}, System Group (Hamkaran System), Tehran, Iran & \textit{2024} \\
+\end{tabularx}
+\begin{itemize}
+    \item Developed and delivered multiple applications during an intensive one-month bootcamp focused on C\# and the .NET ecosystem.
+    \item Applied object-oriented programming (OOP) principles and software development best practices to build robust, scalable applications.
+    \item Collaborated in a team environment to complete practical projects, participating in code reviews and receiving mentorship from senior engineers.
+\end{itemize}
 
-% % Experience Section
-% \section{Experience}
 
-% \begin{tabularx}{\textwidth}{Xr}
-%     \textbf{Personal and Academic Coding Projects} & 2021 -- Present \\
-% \end{tabularx}
-
-% \vspace{0.1 cm}
-
-% \textbf{Highlights:}
-% \begin{itemize}
-%     \item Developed a Python application utilizing OpenCV for real-time image processing,
-%           enabling features such as object detection and image filtering.
-%     \item Implemented a data mining project using Python, extracting valuable insights
-%           from large datasets with libraries like pandas and NumPy to inform
-%           decision-making.
-%     \item Created interactive web applications using Java and JavaScript, enhancing user
-%           experience through dynamic content and responsive design.
-% \end{itemize}
-
-% Projects Section
+% --- PROJECTS SECTION ---
 \section{Projects}
-
-\begin{tabularx}{\textwidth}{Xr}
-    \textbf{Server-Client Communication System} & \href{https://github.com/Erfanhabibi/python-socket.git}{github.com/Erfanhabibi/python-socket} \\
+\begin{tabularx}{\textwidth}{X@{\hskip 1em}r}
+    \textbf{Message Broker System (C\#)} & \href{https://github.com/Erfanhabibi/MessageBroker}{github.com/Erfanhabibi/MessageBroker} \\
 \end{tabularx}
-
-\vspace{0.1 cm}
-
-\textbf{Highlights:}
 \begin{itemize}
-    \item Implemented a server-client communication system using Python's sockets for
-          transferring images and audio data.
-    \item \textbf{Server:} Utilizes Tkinter for the GUI and OpenCV for capturing images from the webcam, along with PyAudio for recording audio.
-    \item \textbf{Prerequisites:} Python 3.x, OpenCV , PyAudio, Pillow .
-    \item \textbf{Usage:} Run the \texttt{server.py} script, click "Start Server" to initialize, and capture images and record audio. Received files are saved in the \texttt{captured\_images\_server} and \texttt{captured\_audio\_server} folders.
-    \item \textbf{Client:} Responsible for sending images and audio data to the server. Implemented separately based on the server's IP address and port numbers.
-    \item \textbf{Notes:} Ensure proper network configurations for communication; adjust the IP address and port numbers in the code as needed.
+    \item Developed a robust Message Broker system in C\# to guarantee ordered, persistent, and reliable data transfer between distributed producers and consumers.
+    \item Architected a decoupled plugin system using interfaces and attributes, allowing third-party developers to dynamically extend functionality.
+    \item Implemented a multithreaded architecture allowing producers and consumers to define their thread counts, optimizing for concurrent performance.
+    \item Engineered a file-based persistence layer to ensure message durability and prevent data loss during server failures or restarts.
+    \item Built an automated retry mechanism and a configurable logging system to improve system resilience and monitorability.
 \end{itemize}
 
-\begin{tabularx}{\textwidth}{Xr}
-    \textbf{Message Broker System} & \href{https://github.com/Erfanhabibi/MessageBroker}{github.com/Erfanhabibi/MessageBroker} \\
+\vspace{0.1cm}
+
+\begin{tabularx}{\textwidth}{X@{\hskip 1em}r}
+    \textbf{Server-Client Communication System (Python)} & \href{https://github.com/Erfanhabibi/python-socket}{github.com/Erfanhabibi/python-socket} \\
 \end{tabularx}
-
-\vspace{0.1 cm}
-
-\textbf{Highlights:}
 \begin{itemize}
-    \item Developed a Message Broker system in C\# to manage data transfer between producers and consumers while ensuring message order and persistence.
-    \item \textbf{Endpoints:} Designed endpoints for producers to send messages and consumers to receive them.
-    \item \textbf{Multithreading:} Implemented thread management to allow producers and consumers to define their required number of threads dynamically.
-    \item \textbf{Message Persistence:} Ensured data durability by storing messages in files to prevent data loss in case of server failures or restarts.
-    \item \textbf{Plugin System:} Designed a decoupled architecture using interfaces and attributes, enabling third-party developers to extend producer and consumer functionalities dynamically.
-    \item \textbf{Retry Mechanism:} Implemented an automatic retry mechanism for failed message deliveries, ensuring messages are resent when the server is down and retried at configured intervals.
-    \item \textbf{Logging System:} Developed a logging mechanism to track key operations such as message sending, receiving, storing, and recovery, with configurable log levels (Info, Warning, Error).
-
+    \item Engineered a server-client system in Python for real-time image and audio data transfer using TCP/IP sockets.
+    \item Developed a multi-threaded server with a Tkinter GUI to capture and manage incoming data streams from multiple clients.
+    \item Utilized OpenCV for webcam image capture and PyAudio for audio recording, creating a robust multimedia streaming pipeline.
 \end{itemize}
 
-% Skills Section
+
+% --- SKILLS SECTION ---
 \section{Skills}
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+    \textbf{Programming Languages} & Python, C\#, C++, Java, C \\
+    \textbf{Frameworks \& Platforms} & .NET, ASP.NET, Entity Framework, Django, Flutter \\
+    \textbf{Machine Learning \& Data} & NumPy, pandas, scikit-learn, TensorFlow, Keras, SQL (MySQL, PostgreSQL) \\
+    \textbf{Image Processing} & OpenCV, Pillow, scikit-image \\
+    \textbf{Networking \& Security} & TCP/IP, Socket Programming, Network Security Fundamentals  \\
+    \textbf{Tools \& Concepts} & Git, Linux Basics, Algorithms, Data Structures, Problem Solving \\
+\end{tabularx}
 
-\begin{onecolentry}
-    \textbf{Programming Languages:} Python, C++, Java, C, C\#
-\end{onecolentry}
-
-
-\vspace{0.1 cm}
-
-\begin{onecolentry}
-    \textbf{Machine Learning:} Python libraries such as NumPy, pandas, scikit-learn, TensorFlow, Keras
-\end{onecolentry}
-
-\vspace{0.1 cm}
-
-\begin{onecolentry}
-    \textbf{Image Processing:} Python libraries such as OpenCV, Pillow, scikit-image
-\end{onecolentry}
-
-\vspace{0.1 cm}
-
-\begin{onecolentry}
-    \textbf{Data Mining:} Knowledge of data analysis and mining techniques (e.g., \texttt{pandas}, \texttt{NumPy}, \texttt{BeautifulSoup})
-\end{onecolentry}
-
-\vspace{0.1 cm}
-
-\begin{onecolentry}
-    \textbf{Networking:} Understanding of networking protocols, TCP/IP, and experience with socket programming
-\end{onecolentry}
-
-\vspace{0.1 cm}
-
-\begin{onecolentry}
-    \textbf{Linux:} Basic knowledge of Linux concepts and commands
-\end{onecolentry}
-
-\vspace{0.1 cm}
-
-\begin{onecolentry}
-    \textbf{Other:} Git, Algorithms, Data Structures, Problem Solving
-\end{onecolentry}
 
 \end{document}
